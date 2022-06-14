@@ -1,4 +1,5 @@
 <script setup lang="ts" name="Card">
+import {NTooltip} from 'naive-ui'
 type PropsData = {
   id:number,
   title: string;
@@ -39,8 +40,19 @@ const props = withDefaults(defineProps<Props>(), {
         >
           <img class="w-full h-full object-cover" :src="item.cover" alt="" />
         </router-link>
-        <h2 class="font-medium truncate mt-1 dark:text-gray-300">{{ item.title }}</h2>
-        <p class="truncate overflow-ellipsis dark:text-gray-500">{{ item.content }}</p>
+        <n-tooltip trigger="hover" class="max-w-100">
+           <template #trigger>
+            <h2 class="font-medium truncate mt-1 dark:text-gray-300">{{ item.title }}</h2>
+           </template>
+           {{item.title}}
+        </n-tooltip>
+        <n-tooltip trigger="hover" class="max-w-100">
+           <template #trigger>
+            <p class="truncate overflow-ellipsis dark:text-gray-500">{{ item.content }}</p>
+           </template>
+           {{item.content}}
+        </n-tooltip>
+        
       </div>
     </div>
   </div>

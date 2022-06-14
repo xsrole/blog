@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <div class="w-full">
     <div class="relative w-full h-80 overflow-hidden rounded-lg md:h-100">
-      <div class="absolute top-2 right-5 flex gap-3 items-center">
+      <div class="absolute top-2 right-5 flex gap-3 items-center z-10">
         <a
           :href="data?.link"
           target="_blank"
