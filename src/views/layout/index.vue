@@ -15,11 +15,15 @@ function onScroll(){
 onMounted(()=>{
   onScroll()
 })
-
+type Menu = {
+  label:string,
+  path:string
+}
+const menuData = ref<Menu[]>([])
 </script>
 <template>
   <div class="w-full flex flex-col items-center justify-center" ref="el">
-    <Header :fixed="appStore.headerFixed" />
+    <Header :fixed="appStore.headerFixed" :menu-data="menuData" />
     <div class="w-full pl-3 pr-3 mt-3 md:max-w-1000px ">
       <Main />
     </div>
