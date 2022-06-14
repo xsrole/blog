@@ -9,6 +9,7 @@ export default [
             code: 200,
             "data|6": [
                 {
+                    "id|+1":1001,
                     cover:Random.image('500x300', '#50B347', '#FFF', 'Note'),
                     title: Random.title(),
                     content: Random.cparagraph()

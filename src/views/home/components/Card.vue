@@ -1,35 +1,46 @@
 <script setup lang="ts" name="Card">
 type PropsData = {
+  id:number,
   title: string;
   cover: string;
   content: string;
 };
 type Props = {
-  title: string;
+  title?: string;
+  subTitle?:string,
+  link?:string,
   data?: PropsData[];
+  type?:string,
 };
 
 const props = withDefaults(defineProps<Props>(), {
   title: "",
+  subTitle:'More',
+  link:'/',
   data: undefined,
+  type:'note'
 });
 </script>
 <template>
   <div>
-    <h1 class="font-normal text-gray-700">{{ title }}</h1>
+    <div class="w-full h-20 pt-5 pb-5 flex items-center gap-3">
+      <div class="w-1.5 rounded-md h-full bg-gray-500 dark:bg-gray-300"></div>
+      <h1 class="font-normal text-gray-700 mr-auto dark:text-gray-300">{{ title }}</h1>
+      <router-link class="text-gray-500 dark:text-gray-300" :to="link">{{subTitle}}</router-link>
+    </div>
     <div class="flex flex-wrap -m-2">
       <div
         v-for="(item, index) in data"
         :key="index"
         class="w-full h-360px p-2 md:w-1/2"
       >
-        <div
-          class="w-full h-260px bg-gray-200 rounded-md rounded-md overflow-hidden"
+        <router-link :to="'/'+type+'/'+item.id"
+          class="w-full h-260px rounded-md rounded-md overflow-hidden block"
         >
           <img class="w-full h-full object-cover" :src="item.cover" alt="" />
-        </div>
-        <h2 class="font-medium truncate mt-1">{{ item.title }}</h2>
-        <p class="truncate overflow-ellipsis">{{ item.content }}</p>
+        </router-link>
+        <h2 class="font-medium truncate mt-1 dark:text-gray-300">{{ item.title }}</h2>
+        <p class="truncate overflow-ellipsis dark:text-gray-500">{{ item.content }}</p>
       </div>
     </div>
   </div>

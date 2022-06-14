@@ -2,7 +2,7 @@
 import { NaiveProvider } from "@/components";
 </script>
 <template>
-  <div class="">
+  <div class="w-full pl-3 pr-3 mt-3 md:max-w-1000px">
     <router-view v-slot="{ Component }">
       <naive-provider>
         <transition name="fade-transform" mode="out-in">

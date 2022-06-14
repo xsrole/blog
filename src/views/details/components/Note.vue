@@ -3,9 +3,7 @@
 
 </script>
 <template>
-<div class="w-full min-h-200">
-    <h1>Note</h1>
-</div>
+
 </template>
 <style scoped lang='less'>
 
