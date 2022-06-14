@@ -19,12 +19,12 @@ import { NaiveProvider } from "@/components";
 }
 
 .fade-transform-enter-from {
-  transform: scale(.95);
+  transform: scale(.98);
   opacity: 0;
 }
 
 .fade-transform-leave-to {
-  transform: scale(1.05);
+  transform: scale(1);
   opacity: 0;
 }
 </style>
