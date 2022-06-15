@@ -10,7 +10,7 @@ export default [
             data:{
                 id:10001,
                 title:'U-Admin-Template',
-                cover:'http://unlit.oss-cn-beijing.aliyuncs.com/2022-04-14/dcd65c870121aca2f77f228b9e2680d1.jpg!carousel',
+                cover:'https://s1.328888.xyz/2022/06/15/pYHCy.jpg',
                 description:'这是一个基于Vite2+Vue3的后台管理系统基础开发模板',
                 content:'',
                 link:'https://gitee.com/cxice/unlit-admin-template',

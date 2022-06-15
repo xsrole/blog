@@ -10,9 +10,19 @@ export default [
             "data|6": [
                 {
                     "id|+1":1001,
-                    cover:Random.image('500x300', '#50B347', '#FFF', 'Note'),
+                    cover:Random.image('500x300', Random.color(), '#FFF', Random.csentence()),
                     title: Random.title(),
-                    content: Random.cparagraph()
+                    description:Random.cparagraph(),
+                    content: Random.cparagraph(),
+                    auth:{
+                        id:1000,
+                        name:'aman',
+                        nickName:'阿满',
+                        avatar:'http://unlit.oss-cn-beijing.aliyuncs.com/2022-04-22/e3beb59b0652f7fbfc32a0102dcf035a.png!avatar',
+                        description:'这个人很懒什么都没写'
+                    },
+                    createAt:'2022-6-14',
+                    updateAt:'2022-6-14',
                 }
             ]
         })

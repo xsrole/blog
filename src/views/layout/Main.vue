@@ -2,7 +2,7 @@
 import { NaiveProvider } from "@/components";
 </script>
 <template>
-  <div class="w-full pl-3 pr-3 mt-3 md:max-w-1000px">
+  <div class="w-full pl-3 pr-3 mt-3" md="max-w-1000px">
     <router-view v-slot="{ Component }">
       <naive-provider>
         <transition name="fade-transform" mode="out-in">
@@ -19,7 +19,7 @@ import { NaiveProvider } from "@/components";
 }
 
 .fade-transform-enter-from {
-  transform: scale(.98);
+  transform: scale(0.98);
   opacity: 0;
 }
 

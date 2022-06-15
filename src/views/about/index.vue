@@ -1,11 +1,9 @@
-<script setup lang='ts' name="About">
-    
+<script setup lang="ts" name="About">
+import MainTitle from "@/components/custom/MainTitle.vue";
 </script>
 <template>
-<div>
-    <h1>关于</h1>
-</div>
+  <div class="w-full min-h-200">
+    <main-title title="About" sub-title="关于" />
+  </div>
 </template>
-<style scoped lang='less'>
-
-</style>
+<style scoped lang="less"></style>

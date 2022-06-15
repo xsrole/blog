@@ -1,11 +1,13 @@
 <script setup lang="ts" name="Layout">
-import { onMounted, ref } from "vue";
+import { onMounted, ref,computed } from "vue";
 import { useScroll } from "@vueuse/core";
 import { useAppStore } from "@/store";
+import { useRoute } from "vue-router";
 import Header from "./Header.vue";
 import Main from "./Main.vue";
 import Footer from './Foote.vue'
 const appStore = useAppStore();
+const route = useRoute()
 const el = ref<HTMLElement | null>(null);
 const { y } = useScroll(el);
 function onScroll() {
@@ -39,10 +41,15 @@ const menuData = ref<Menu[]>([
     path: "/about",
   },
 ]);
+const headerBack = computed(()=>{
+  return route.name ==='Details'?true:false
+})
+
+
 </script>
 <template>
-  <div class="w-full flex flex-col items-center justify-center bg-white transition-colors dark:bg-dark-800" ref="el">
-    <Header :fixed="appStore.headerFixed" :menu-data="menuData" />
+  <div class="w-full flex flex-col items-center justify-center bg-white transition-colors" dark="bg-dark-800" ref="el">
+    <Header :fixed="appStore.headerFixed" :menu-data="menuData" :back="headerBack" />
     <Main />
     <Footer/>
   </div>
