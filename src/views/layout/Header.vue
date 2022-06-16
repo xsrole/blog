@@ -28,7 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
       :class="fixed ? 'fixed z-10 animate-fade-in animate-duration-300' : ''"
     >
       <div
-        class="w-full h-15 flex items-center justify-start gap-5 pl-3 pr-3"
+        class="w-full h-15 flex items-center justify-start gap-3 pl-3 pr-3"
         md="max-w-1000px"
       >
         <div class="w-6 h-full flex items-center justify-center">
